@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="campus-connect-logo.jpg" alt="Campus Connect Logo">
+                <h1>Campus Connect</h1>
+            </div>
+            <div class="auth-buttons">
+                <a href="signup.html"><button><i class="fas fa-user-plus"></i> Sign Up</button></a>
+                <a href="login.html"><button><i class="fas fa-sign-in-alt"></i> Log In</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <h2>Welcome to Campus Connect</h2>
+            <p>A platform for sharing and accessing notes, event updates, and club activities for students.</p>
+            <a href="signup.html"><button>Sign Up Now</button></a>
+        </section>
+
+        <section class="features container">
+            <div class="feature fade-in">
+                <i class="fas fa-file-alt fa-3x"></i>
+                <h3>Browse Notes</h3>
+                <ul>
+                    <li>'19 Batch</li>
+                    <li>'20 Batch</li>
+                    <li>'21 Batch</li>
+                    <li>'22 Batch</li>
+                </ul>
+            </div>
+
+            <div class="feature fade-in">
+                <i class="fas fa-calendar-alt fa-3x"></i>
+                <h3>Upcoming Events</h3>
+                <p>View the schedule for events and workshops</p>
+            </div>
+
+            <div class="feature fade-in">
+                <i class="fas fa-bell fa-3x"></i>
+                <h3>Notifications</h3>
+                <p>Get notified about club workshops</p>
+                <a href="notification.html"><button class="view-btn">View Notifications</button></a>
+            </div>
+
+            <div class="feature fade-in">
+                <i class="fas fa-users fa-3x"></i>
+                <h3>Campus Clubs</h3>
+                <p>Learn more about clubs of CUET</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Campus Connect. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple fade-in on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => appearOnScroll.observe(fader));
+    </script>
+</body>
+</html>

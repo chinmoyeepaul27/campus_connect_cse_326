@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Campus Connect</title>
+  <link rel="stylesheet" href="dashboard.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo">
+        <img src="campus-connect-logo.jpg" alt="Campus Connect Logo">
+        <h1>Campus Connect</h1>
+      </div>
+      <div class="auth-buttons">
+        <a href="notification.html"><button><i class="fas fa-bell"></i> Notifications</button></a>
+        <a href="index.html"><button><i class="fas fa-home"></i> Home</button></a>
+        <a href="login.html"><button><i class="fas fa-sign-out-alt"></i> Log Out</button></a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="dashboard-header">
+      <div class="user-welcome">
+        <div class="user-avatar">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/001/840/612/small_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg" alt="User Profile" />
+        </div>
+        <div class="user-info">
+          <h2>Welcome back, Alex!</h2>
+          <p>Computer Science • 2022 Batch</p>
+        </div>
+      </div>
+      <div class="quick-stats">
+        <div class="stat-card">
+          <i class="fas fa-note-sticky"></i>
+          <div class="stat-info">
+            <h3>12</h3>
+            <p>Saved Notes</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-calendar-check"></i>
+          <div class="stat-info">
+            <h3>4</h3>
+            <p>Upcoming Events</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-users"></i>
+          <div class="stat-info">
+            <h3>3</h3>
+            <p>Joined Clubs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard-main">
+      <div class="dashboard-sidebar">
+        <h3>Quick Access</h3>
+        <ul class="sidebar-menu">
+          <li class="active"><a href="#"><i class="fas fa-th-large"></i> Overview</a></li>
+          <li><a href="#"><i class="fas fa-book"></i> My Notes</a></li>
+          <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+          <li><a href="clubs.html"><i class="fas fa-user-friends"></i> Clubs</a></li>
+          <li><a href="notification.html"><i class="fas fa-bell"></i> Notifications</a></li>
+          <!-- <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li> -->
+        </ul>
+
+        <!-- <div class="sidebar-promo">
+          <h4>Ready for Tech Fest?</h4>
+          <p>Register now for the annual tech fest starting May 15!</p>
+          <button>Register Now</button>
+        </div> -->
+      </div>
+
+      <div class="dashboard-content">
+        <h3><i class="fas fa-columns"></i> My Dashboard</h3>
+        
+        <div class="dashboard-grid">
+          <div class="card notes-card">
+            <div class="card-header">
+              <i class="fas fa-book"></i>
+              <h4>My Notes</h4>
+            </div>
+            <div class="card-content">
+              <ul class="notes-list">
+                <li>
+                  <span>Data Structures & Algorithms</span>
+                  <small>Updated 2 days ago</small>
+                </li>
+                <li>
+                  <span>Database Management Systems</span>
+                  <small>Updated 1 week ago</small>
+                </li>
+                <li>
+                  <span>Operating Systems</span>
+                  <small>Updated 2 weeks ago</small>
+                </li>
+              </ul>
+              <a href="#" class="card-link">View All Notes <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="card events-card">
+            <div class="card-header">
+              <i class="fas fa-calendar-alt"></i>
+              <h4>Upcoming Events</h4>
+            </div>
+            <div class="card-content">
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="day">10</span>
+                  <span class="month">MAY</span>
+                </div>
+                <div class="event-details">
+                  <h5>Workshop on AI & ML</h5>
+                  <p>Coding Club • 2:00 PM</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="day">15</span>
+                  <span class="month">MAY</span>
+                </div>
+                <div class="event-details">
+                  <h5>Annual Tech Fest</h5>
+                  <p>Campus Grounds • 9:00 AM</p>
+                </div>
+              </div>
+              <a href="events.html" class="card-link">All Events <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="card clubs-card">
+            <div class="card-header">
+              <i class="fas fa-user-friends"></i>
+              <h4>My Clubs</h4>
+            </div>
+            <div class="card-content">
+              <div class="clubs-list">
+                <div class="club-item">
+                  <img src="https://thaka.bing.com/th/id/OIP.8iUHv9rx0b09lVztmrLTswHaE0?rs=1&pid=ImgDetMain" alt="Coding Club" />
+                  <span>Coding Club</span>
+                </div>
+                <div class="club-item">
+                  <img src="https://thaka.bing.com/th/id/OIP.vheCTGdhMtv6fpq3nhy-qwHaFO?rs=1&pid=ImgDetMain" alt="Photography Club" />
+                  <span>Photography Club</span>
+                </div>
+                <div class="club-item">
+                  <img src="https://media.licdn.com/dms/image/C510BAQHiW9JZomJcBA/company-logo_200_200/0/1630629488712?e=2147483647&v=beta&t=DcYwZNOzszbgbN8bX812QcTYC1gIeeVR7OqfqU1YPBg" alt="Debate Club" />
+                  <span>Debate Club</span>
+                </div>
+              </div>
+              <a href="clubs.html" class="card-link">Explore Clubs <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="card notifications-card">
+            <div class="card-header">
+              <i class="fas fa-bell"></i>
+              <h4>Recent Notifications</h4>
+            </div>
+            <div class="card-content">
+              <div class="notification-item">
+                <i class="fas fa-info-circle"></i>
+                <p>New study materials available for DBMS</p>
+              </div>
+              <div class="notification-item">
+                <i class="fas fa-calendar-check"></i>
+                <p>Tech Fest registration closing soon</p>
+              </div>
+              <a href="notification.html" class="card-link">All Notifications <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-section">
+          <h3><i class="fas fa-history"></i> Recent Activity</h3>
+          <div class="activity-timeline">
+            <div class="timeline-item">
+              <div class="timeline-icon"><i class="fas fa-file-alt"></i></div>
+              <div class="timeline-content">
+                <p>You uploaded a new note on Data Structures</p>
+                <span class="timeline-date">Today, 10:45 AM</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon"><i class="fas fa-calendar-check"></i></div>
+              <div class="timeline-content">
+                <p>You registered for Workshop on AI & ML</p>
+                <span class="timeline-date">Yesterday, 3:30 PM</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon"><i class="fas fa-comment"></i></div>
+              <div class="timeline-content">
+                <p>You commented on Database Management notes</p>
+                <span class="timeline-date">May 1, 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Campus Connect. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Add active class to sidebar menu items on click
+    const menuItems = document.querySelectorAll('.sidebar-menu li');
+    menuItems.forEach(item => {
+      item.addEventListener('click', function() {
+        menuItems.forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Dashboard card animations with staggered delay
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.1 + 0.2}s`;
+    });
+
+    // Timeline animation with staggered delay
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach((item, index) => {
+      item.style.animationDelay = `${index * 0.2 + 0.5}s`;
+    });
+
+    // Update the welcome message with time of day
+    const updateWelcome = () => {
+      const hour = new Date().getHours();
+      const welcomeText = document.querySelector('.user-info h2');
+      let greeting = 'Welcome back';
+      
+      if (hour < 12) {
+        greeting = 'Good morning';
+      } else if (hour < 18) {
+        greeting = 'Good afternoon';
+      } else {
+        greeting = 'Good evening';
+      }
+      
+      welcomeText.textContent = `${greeting}, Alex!`;
+    };
+    
+    updateWelcome();
+  </script>
+</body>
+</html>

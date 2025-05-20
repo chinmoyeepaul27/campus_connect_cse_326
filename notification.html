@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notifications - Campus Connect</title>
+  <link rel="stylesheet" href="notification.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <nav class="container">
+          <div class="logo">
+            <img src="campus-connect-logo.jpg" alt="Campus Connect Logo">
+            <h1>Campus Connect</h1>
+          </div>
+          <div class="auth-buttons">
+            <a href="dashboard.html"><button><i class="fas fa-th-large"></i> Dashboard</button></a>
+            <a href="index.html"><button><i class="fas fa-home"></i> Home</button></a>
+            <a href="login.html"><button><i class="fas fa-sign-out-alt"></i> Log Out</button></a>
+          </div>
+        </nav>
+      </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h2><i class="fas fa-bell"></i> Notifications</h2>
+      <p>Stay updated with important campus announcements, events, and notes</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="notification-controls fade-in">
+      <div class="notification-filter">
+        <button class="active" data-filter="all">All Notifications</button>
+        <button data-filter="events">Events</button>
+        <button data-filter="announcements">Announcements</button>
+        <button data-filter="notes">Study Materials</button>
+      </div>
+    </div>
+
+    <div class="notifications-list">
+      <div class="notification fade-in" data-type="events">
+        <div class="notification-icon event">
+          <i class="fas fa-bullhorn"></i>
+        </div>
+        <div class="notification-content">
+          <h3>Workshop on AI & ML by Coding Club</h3>
+          <p>Learn the fundamentals of machine learning algorithms and their applications. This hands-on workshop will cover basic concepts and real-world use cases.</p>
+          <div class="notification-meta">
+            <span><i class="fas fa-calendar"></i> May 10, 2025</span>
+            <span><i class="fas fa-clock"></i> 2:00 PM</span>
+            <span><i class="fas fa-map-marker-alt"></i> CS Building, Room 203</span>
+          </div>
+          <button class="rsvp-button">Register</button>
+        </div>
+        <div class="notification-time">
+          <span>2 hours ago</span>
+          <span class="notification-badge event">Event</span>
+        </div>
+      </div>
+
+      <div class="notification fade-in" data-type="events">
+        <div class="notification-icon event">
+          <i class="fas fa-calendar-check"></i>
+        </div>
+        <div class="notification-content">
+          <h3>Annual Tech Fest Registration</h3>
+          <p>Registration for the annual tech fest closes soon. Don't miss your chance to participate in exciting competitions, workshops, and networking opportunities!</p>
+          <div class="notification-meta">
+            <span><i class="fas fa-calendar"></i> Closes on May 12, 2025</span>
+            <span><i class="fas fa-link"></i> <a href="#">Register Here</a></span>
+          </div>
+        </div>
+        <div class="notification-time">
+          <span>1 day ago</span>
+          <span class="notification-badge event">Event</span>
+        </div>
+      </div>
+
+      <div class="notification fade-in" data-type="notes">
+        <div class="notification-icon notes">
+          <i class="fas fa-book"></i>
+        </div>
+        <div class="notification-content">
+          <h3>New Study Materials Available</h3>
+          <p>Notes for Semester 4 Database Management Systems have been uploaded by Prof. Khan. Includes lecture notes, practice problems, and reference materials.</p>
+          <div class="notification-meta">
+            <span><i class="fas fa-folder"></i> Database Management Systems</span>
+            <span><i class="fas fa-download"></i> <a href="#">Download Notes</a></span>
+          </div>
+        </div>
+        <div class="notification-time">
+          <span>2 days ago</span>
+          <span class="notification-badge notes">Notes</span>
+        </div>
+      </div>
+
+      <div class="notification fade-in" data-type="announcements">
+        <div class="notification-icon announcement">
+          <i class="fas fa-info-circle"></i>
+        </div>
+        <div class="notification-content">
+          <h3>Library Timing Update</h3>
+          <p>The campus library will now be open until 10:00 PM on weekdays to accommodate students during the exam preparation period.</p>
+          <div class="notification-meta">
+            <span><i class="fas fa-calendar"></i> Effective from May 15, 2025</span>
+          </div>
+        </div>
+        <div class="notification-time">
+          <span>3 days ago</span>
+          <span class="notification-badge announcement">Announcement</span>
+        </div>
+      </div>
+      
+      <div class="notification fade-in" data-type="announcements">
+        <div class="notification-icon announcement">
+          <i class="fas fa-microphone"></i>
+        </div>
+        <div class="notification-content">
+          <h3>Campus Wi-Fi Maintenance</h3>
+          <p>The campus IT department will be conducting maintenance on the Wi-Fi network this weekend. Expect intermittent connectivity in all academic buildings.</p>
+          <div class="notification-meta">
+            <span><i class="fas fa-calendar"></i> May 8-9, 2025</span>
+            <span><i class="fas fa-clock"></i> 10:00 PM - 6:00 AM</span>
+          </div>
+        </div>
+        <div class="notification-time">
+          <span>4 days ago</span>
+          <span class="notification-badge announcement">Announcement</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Empty state (hidden by default) -->
+    <div class="no-notifications" style="display: none;">
+      <i class="fas fa-bell-slash"></i>
+      <h3>No Notifications</h3>
+      <p>You're all caught up! Check back later for new notifications.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Campus Connect. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Filter notifications
+    const filterButtons = document.querySelectorAll('.notification-filter button');
+    const notifications = document.querySelectorAll('.notification');
+    const noNotificationsElement = document.querySelector('.no-notifications');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        const filter = button.getAttribute('data-filter');
+        let visibleCount = 0;
+        
+        // Show/hide notifications based on filter
+        notifications.forEach(notification => {
+          if (filter === 'all' || notification.getAttribute('data-type') === filter) {
+            notification.style.display = 'flex';
+            visibleCount++;
+          } else {
+            notification.style.display = 'none';
+          }
+        });
+        
+        // Show empty state if no notifications match filter
+        if (visibleCount === 0) {
+          noNotificationsElement.style.display = 'block';
+        } else {
+          noNotificationsElement.style.display = 'none';
+        }
+      });
+    });
+
+    // RSVP button functionality
+    const rsvpButtons = document.querySelectorAll('.rsvp-button');
+    rsvpButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        if (this.textContent === 'RSVP') {
+          this.textContent = 'Attending';
+          this.classList.add('attending');
+        } else {
+          this.textContent = 'RSVP';
+          this.classList.remove('attending');
+        }
+      });
+    });
+    
+    // Animation for page elements
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -100px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+      // Add slight delay to each item for cascade effect
+      const index = Array.from(faders).indexOf(fader);
+      fader.style.transitionDelay = `${index * 0.1}s`;
+    });
+  </script>
+</body>
+</html>

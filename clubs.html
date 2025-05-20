@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Clubs - Campus Connect</title>
+  <link rel="stylesheet" href="clubs.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <nav class="container">
+          <div class="logo">
+            <img src="campus-connect-logo.jpg" alt="Campus Connect Logo">
+            <h1>Campus Connect</h1>
+          </div>
+          <div class="auth-buttons">
+            <a href="dashboard.html"><button><i class="fas fa-th-large"></i> Dashboard</button></a>
+            <a href="index.html"><button><i class="fas fa-home"></i> Home</button></a>
+            <a href="notification.html"><button><i class="fas fa-bell"></i> Notifications</button></a>
+          </div>
+        </nav>
+    </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h2><i class="fas fa-users"></i> Campus Clubs</h2>
+      <p>Discover and join exciting clubs and activities on campus</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="clubs-controls fade-in">
+      <div class="clubs-filter">
+        <button class="active" data-filter="all">All Clubs</button>
+        <button data-filter="registered">My Clubs</button>
+        <button data-filter="tech">Tech</button>
+        <button data-filter="cultural">Cultural</button>
+        <button data-filter="sports">Sports</button>
+      </div>
+    </div>
+
+    <h3 class="section-title fade-in">Your Registered Clubs</h3>
+
+    <div class="clubs-list">
+      <div class="club-card fade-in" data-type="registered tech">
+        <div class="club-banner">
+          <div class="club-logo tech">
+            <i class="fas fa-code"></i>
+          </div>
+          <span class="registered-badge">Member</span>
+        </div>
+        <div class="club-content">
+          <h3>Coding Club</h3>
+          <p>A community for coding enthusiasts to collaborate on projects, participate in hackathons, and learn new technologies.</p>
+          <div class="club-meta">
+            <span><i class="fas fa-users"></i> 120 members</span>
+            <span><i class="fas fa-calendar"></i> Weekly meetings</span>
+          </div>
+          <div class="club-tags">
+            <span class="tag">Programming</span>
+            <span class="tag">Web Dev</span>
+            <span class="tag">AI/ML</span>
+          </div>
+        </div>
+        <div class="club-action">
+          <button class="leave-button">Leave Club</button>
+        </div>
+      </div>
+
+      <div class="club-card fade-in" data-type="registered cultural">
+        <div class="club-banner">
+          <div class="club-logo cultural">
+            <i class="fas fa-music"></i>
+          </div>
+          <span class="registered-badge">Member</span>
+        </div>
+        <div class="club-content">
+          <h3>Music Society</h3>
+          <p>Express your musical talents through performances, jam sessions, and workshops. Open to all skill levels and music genres.</p>
+          <div class="club-meta">
+            <span><i class="fas fa-users"></i> 85 members</span>
+            <span><i class="fas fa-calendar"></i> Bi-weekly meetings</span>
+          </div>
+          <div class="club-tags">
+            <span class="tag">Vocals</span>
+            <span class="tag">Instruments</span>
+            <span class="tag">Performances</span>
+          </div>
+        </div>
+        <div class="club-action">
+          <button class="leave-button">Leave Club</button>
+        </div>
+      </div>
+
+      <h3 class="section-title fade-in">Explore Clubs</h3>
+
+      <div class="club-card fade-in" data-type="tech">
+        <div class="club-banner">
+          <div class="club-logo tech">
+            <i class="fas fa-robot"></i>
+          </div>
+        </div>
+        <div class="club-content">
+          <h3>Robotics Club</h3>
+          <p>Design, build, and program robots for competitions and exhibitions. Learn about mechanical engineering, electronics, and programming.</p>
+          <div class="club-meta">
+            <span><i class="fas fa-users"></i> 65 members</span>
+            <span><i class="fas fa-calendar"></i> Weekly meetings</span>
+          </div>
+          <div class="club-tags">
+            <span class="tag">Robotics</span>
+            <span class="tag">Electronics</span>
+            <span class="tag">IoT</span>
+          </div>
+        </div>
+        <div class="club-action">
+          <button class="join-button">Join Club</button>
+        </div>
+      </div>
+
+      <div class="club-card fade-in" data-type="cultural">
+        <div class="club-banner">
+          <div class="club-logo cultural">
+            <i class="fas fa-theater-masks"></i>
+          </div>
+        </div>
+        <div class="club-content">
+          <h3>Drama Club</h3>
+          <p>Explore the world of theater through acting, directing, and production. Develop performance skills and participate in campus productions.</p>
+          <div class="club-meta">
+            <span><i class="fas fa-users"></i> 50 members</span>
+            <span><i class="fas fa-calendar"></i> Twice a week</span>
+          </div>
+          <div class="club-tags">
+            <span class="tag">Acting</span>
+            <span class="tag">Production</span>
+            <span class="tag">Plays</span>
+          </div>
+        </div>
+        <div class="club-action">
+          <button class="join-button">Join Club</button>
+        </div>
+      </div>
+
+      <div class="club-card fade-in" data-type="sports">
+        <div class="club-banner">
+          <div class="club-logo sports">
+            <i class="fas fa-basketball-ball"></i>
+          </div>
+        </div>
+        <div class="club-content">
+          <h3>Basketball Team</h3>
+          <p>Compete in intercollegiate basketball tournaments and practice regularly to improve skills. Open to both beginners and experienced players.</p>
+          <div class="club-meta">
+            <span><i class="fas fa-users"></i> 30 members</span>
+            <span><i class="fas fa-calendar"></i> Practice 3x weekly</span>
+          </div>
+          <div class="club-tags">
+            <span class="tag">Team Sport</span>
+            <span class="tag">Fitness</span>
+            <span class="tag">Competition</span>
+          </div>
+        </div>
+        <div class="club-action">
+          <button class="join-button">Join Club</button>
+        </div>
+      </div>
+
+      <div class="club-card fade-in" data-type="sports">
+        <div class="club-banner">
+          <div class="club-logo sports">
+            <i class="fas fa-running"></i>
+          </div>
+        </div>
+        <div class="club-content">
+          <h3>Athletics Club</h3>
+          <p>Train for track and field events and represent the university in competitions. Includes sprinting, distance running, jumping, and throwing events.</p>
+          <div class="club-meta">
+            <span><i class="fas fa-users"></i> 45 members</span>
+            <span><i class="fas fa-calendar"></i> Daily practice sessions</span>
+          </div>
+          <div class="club-tags">
+            <span class="tag">Track</span>
+            <span class="tag">Field</span>
+            <span class="tag">Fitness</span>
+          </div>
+        </div>
+        <div class="club-action">
+          <button class="join-button">Join Club</button>
+        </div>
+      </div>
+
+      <div class="club-card fade-in" data-type="tech">
+        <div class="club-banner">
+          <div class="club-logo tech">
+            <i class="fas fa-camera"></i>
+          </div>
+        </div>
+        <div class="club-content">
+          <h3>Photography Club</h3>
+          <p>Explore the art of photography through workshops, photo walks, and exhibitions. Learn techniques, editing skills, and artistic composition.</p>
+          <div class="club-meta">
+            <span><i class="fas fa-users"></i> 70 members</span>
+            <span><i class="fas fa-calendar"></i> Weekly meetings</span>
+          </div>
+          <div class="club-tags">
+            <span class="tag">Photography</span>
+            <span class="tag">Editing</span>
+            <span class="tag">Visual Arts</span>
+          </div>
+        </div>
+        <div class="club-action">
+          <button class="join-button">Join Club</button>
+        </div>
+      </div>
+
+      <div class="club-card fade-in" data-type="cultural">
+        <div class="club-banner">
+          <div class="club-logo cultural">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+        </div>
+        <div class="club-content">
+          <h3>Art & Design Club</h3>
+          <p>Express creativity through various art forms including painting, sketching, and digital design. Participate in exhibitions and collaborative projects.</p>
+          <div class="club-meta">
+            <span><i class="fas fa-users"></i> 55 members</span>
+            <span><i class="fas fa-calendar"></i> Weekly workshops</span>
+          </div>
+          <div class="club-tags">
+            <span class="tag">Fine Arts</span>
+            <span class="tag">Digital Design</span>
+            <span class="tag">Crafts</span>
+          </div>
+        </div>
+        <div class="club-action">
+          <button class="join-button">Join Club</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Empty state (hidden by default) -->
+    <div class="no-clubs" style="display: none;">
+      <i class="fas fa-users-slash"></i>
+      <h3>No Clubs Found</h3>
+      <p>There are no clubs matching your filter criteria. Try a different filter or check back later.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Campus Connect. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Filter clubs
+    const filterButtons = document.querySelectorAll('.clubs-filter button');
+    const clubs = document.querySelectorAll('.club-card');
+    const noClubsElement = document.querySelector('.no-clubs');
+    const sectionTitles = document.querySelectorAll('.section-title');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        const filter = button.getAttribute('data-filter');
+        let visibleCount = 0;
+        
+        // Show/hide clubs based on filter
+        clubs.forEach(club => {
+          const types = club.getAttribute('data-type').split(' ');
+          if (filter === 'all' || types.includes(filter)) {
+            club.style.display = 'flex';
+            visibleCount++;
+          } else {
+            club.style.display = 'none';
+          }
+        });
+        
+        // Handle section titles visibility
+        if (filter === 'registered') {
+          sectionTitles[0].style.display = 'block';
+          sectionTitles[1].style.display = 'none';
+        } else if (filter === 'all') {
+          sectionTitles[0].style.display = 'block';
+          sectionTitles[1].style.display = 'block';
+        } else {
+          sectionTitles[0].style.display = 'none';
+          sectionTitles[1].style.display = 'block';
+        }
+        
+        // Show empty state if no clubs match filter
+        if (visibleCount === 0) {
+          noClubsElement.style.display = 'block';
+        } else {
+          noClubsElement.style.display = 'none';
+        }
+      });
+    });
+
+    // Join/Leave button functionality
+    const joinButtons = document.querySelectorAll('.join-button');
+    joinButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const clubCard = this.closest('.club-card');
+        const clubBanner = clubCard.querySelector('.club-banner');
+        
+        // Add registered badge
+        if (!clubBanner.querySelector('.registered-badge')) {
+          const badge = document.createElement('span');
+          badge.className = 'registered-badge';
+          badge.textContent = 'Member';
+          clubBanner.appendChild(badge);
+        }
+        
+        // Update button
+        this.textContent = 'Leave Club';
+        this.className = 'leave-button';
+        
+        // Add registered class to data-type
+        let types = clubCard.getAttribute('data-type');
+        if (!types.includes('registered')) {
+          clubCard.setAttribute('data-type', types + ' registered');
+        }
+        
+        // Re-add event listener as leave button
+        this.addEventListener('click', handleLeaveClick, { once: true });
+      });
+    });
+    
+    const leaveButtons = document.querySelectorAll('.leave-button');
+    leaveButtons.forEach(button => {
+      button.addEventListener('click', handleLeaveClick, { once: true });
+    });
+    
+    function handleLeaveClick() {
+      const clubCard = this.closest('.club-card');
+      const clubBanner = clubCard.querySelector('.club-banner');
+      
+      // Remove registered badge
+      const badge = clubBanner.querySelector('.registered-badge');
+      if (badge) {
+        badge.remove();
+      }
+      
+      // Update button
+      this.textContent = 'Join Club';
+      this.className = 'join-button';
+      
+      // Remove registered class from data-type
+      let types = clubCard.getAttribute('data-type');
+      types = types.replace('registered', '').trim();
+      clubCard.setAttribute('data-type', types);
+      
+      // Re-add event listener as join button
+      this.addEventListener('click', function() {
+        const clubCard = this.closest('.club-card');
+        const clubBanner = clubCard.querySelector('.club-banner');
+        
+        // Add registered badge
+        if (!clubBanner.querySelector('.registered-badge')) {
+          const badge = document.createElement('span');
+          badge.className = 'registered-badge';
+          badge.textContent = 'Member';
+          clubBanner.appendChild(badge);
+        }
+        
+        // Update button
+        this.textContent = 'Leave Club';
+        this.className = 'leave-button';
+        
+        // Add registered class to data-type
+        let types = clubCard.getAttribute('data-type');
+        if (!types.includes('registered')) {
+          clubCard.setAttribute('data-type', types + ' registered');
+        }
+        
+        // Re-add event listener as leave button
+        this.addEventListener('click', handleLeaveClick, { once: true });
+      }, { once: true });
+    }
+    
+    // Animation for page elements
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -100px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+      // Add slight delay to each item for cascade effect
+      const index = Array.from(faders).indexOf(fader);
+      fader.style.transitionDelay = `${index * 0.1}s`;
+    });
+  </script>
+</body>
+</html>
